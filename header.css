@@ -1,0 +1,153 @@
+.header{
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(228,228,228);
+  z-index: 100;
+}
+
+.left-section{
+  display: flex;
+  align-items: center;
+}
+
+.left-section .hamburger-menu{
+  margin-left: 24px;
+  margin-right: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.left-section .youtube-logo{
+  height: 20px;
+  cursor: pointer;
+}
+
+.middle-section{
+  margin-left: 70px;
+  margin-right: 40px;
+  max-width: 500px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle-section .search-bar{
+  flex: 1;
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 20px 0 0 20px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  width: 0;
+}
+
+.middle-section .search-bar::placeholder{
+  font-size: 16px;
+}
+
+.middle-section img{
+  height: 25px;
+}
+
+
+
+.middle-section .search-button{
+  height: 39px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 0 20px 20px 0 ;
+  margin-left: -1px;
+}
+
+.middle-section .voice-search-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #F8F8F8;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.middle-section .search-button,
+.middle-section .voice-search-button,
+.upload,
+.youtube-apps,
+.notification-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -30px;
+  background-color: gray;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload:hover .tooltip,
+.youtube-apps:hover .tooltip,
+.notification-icon:hover .tooltip{
+  opacity: 1;
+}
+
+.right-section{
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.right-section img{
+  height: 25px;
+  cursor: pointer;
+}
+
+.right-section .notification-icon{
+  position: relative;
+}
+
+.right-section .notification-icon>.notification-count{
+  background-color: rgb(186, 30, 30);
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  padding: 2px 5px;
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  cursor: pointer;
+}
+
+.right-section .my-profile-picture{
+  height: 35px;
+  border-radius: 50%;
+}
+
+@media (min-width:1000px) {
+  .tooltip, .notification-count{
+    font-size: 14px;
+  }
+} 
